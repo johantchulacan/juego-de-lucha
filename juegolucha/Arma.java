@@ -1,22 +1,22 @@
 import java.util.Random;
-import java.util.Scanner;
 
-// Clase Arma (Composición)
-class Arma {
+public class Arma {
     private String nombre;
-    private int danoExtra;
+    private int minDano;
+    private int maxDano;
+    private Random rand = new Random();
 
-    public Arma(String nombre, int danoExtra) {
+    public Arma(String nombre, int minDano, int maxDano) {
         this.nombre = nombre;
-        this.danoExtra = danoExtra;
+        this.minDano = minDano;
+        this.maxDano = maxDano;
     }
 
-    public int getDanoExtra() {
-        return danoExtra;
+    public int usar() {
+        return rand.nextInt((maxDano - minDano) + 1) + minDano;
     }
 
     public String getNombre() {
         return nombre;
     }
 }
-
