@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public abstract class Personaje {
+public class Personaje {
     protected String nombre;
     protected int puntosDeVida;
     protected Arma arma;
