@@ -1,5 +1,8 @@
 import java.util.Scanner;
-public static void main(String[] args) {
+
+public class Main {
+    
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Nombre del Guerrero: ");
@@ -19,3 +22,4 @@ public static void main(String[] args) {
         JuegoLucha juego = new JuegoLucha(guerrero, mago);
         juego.iniciarPelea();
     }
+}

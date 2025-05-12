@@ -14,7 +14,7 @@ public class Personaje {
         this.habilidades = new ArrayList<>();
     }
 
-    public void atacar(Personaje oponente);
+    public void atacar(Personaje oponente){};
 
     public void recibirDano(int dano) {
         this.puntosDeVida -= dano;
