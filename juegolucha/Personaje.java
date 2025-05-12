@@ -5,16 +5,20 @@ public class Personaje {
     protected String nombre;
     protected int puntosDeVida;
     protected Arma arma;
-    protected List<Habilidad> habilidades;
+    protected Habilidad[] habilidades;
+    protected int cantidadHabilidades;
 
     public Personaje(String nombre, Arma arma) {
         this.nombre = nombre;
         this.puntosDeVida = 100;
         this.arma = arma;
-        this.habilidades = new ArrayList<>();
+        this.habilidades = new Habilidad[10]; // por ejemplo, máximo 10 habilidades
+        this.cantidadHabilidades = 0;
     }
 
-    public void atacar(Personaje oponente){};
+    public void atacar(Personaje oponente) {
+        // Método vacío, se sobrescribe en subclases
+    }
 
     public void recibirDano(int dano) {
         this.puntosDeVida -= dano;
@@ -34,6 +38,22 @@ public class Personaje {
     }
 
     public void agregarHabilidad(Habilidad h) {
-        habilidades.add(h);
+        if (cantidadHabilidades < habilidades.length) {
+            habilidades[cantidadHabilidades++] = h;
+        } else {
+            System.out.println("No se pueden agregar más habilidades a " + nombre);
+        }
+    }
+
+    public Habilidad getHabilidad(int index) {
+        if (index >= 0 && index < cantidadHabilidades) {
+            return habilidades[index];
+        }
+        return null;
+    }
+
+    public int getCantidadHabilidades() {
+        return cantidadHabilidades;
     }
 }
+
