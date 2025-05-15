@@ -1,3 +1,5 @@
+// Clase que representa una habilidad que un personaje puede tener
+
 public class Habilidad {
     private String nombre;
 
