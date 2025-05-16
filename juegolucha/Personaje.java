@@ -60,5 +60,13 @@ public class Personaje {
     public int getCantidadHabilidades() {
         return cantidadHabilidades;
     }
+
+    // MÉTODO NUEVO para obtener la primera habilidad
+    public Habilidad getPrimeraHabilidad() {
+        if (cantidadHabilidades > 0) {
+            return habilidades[0];
+        }
+        return null;
+    }
 }
 

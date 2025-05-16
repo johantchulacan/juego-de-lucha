@@ -10,4 +10,9 @@ public class Habilidad {
     public String getNombre() {
         return nombre;
     }
+
+    public void usar() {
+        System.out.println("Usando habilidad: " + nombre);
+}
+
 }

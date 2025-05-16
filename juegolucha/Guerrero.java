@@ -12,5 +12,10 @@ public class Guerrero extends Personaje {
         oponente.recibirDano(dano);
         System.out.println(this.nombre + " (Guerrero) ataca con " + arma.getNombre() +
                            " causando " + dano + " de daño.");
+        
+        Habilidad habilidad = getPrimeraHabilidad();
+        if (habilidad != null) {
+            habilidad.usar();
+        }
     }
 }

@@ -20,8 +20,13 @@ public class Main {
 
 
         // Se asignan habilidades a los personajes
-        guerrero.agregarHabilidad(new Habilidad("Corte Circular"));
-        mago.agregarHabilidad(new Habilidad("Bola de Fuego"));
+     Habilidad habilidadGuerrero = ElegirHabilidades.elegirHabilidad(scanner, guerrero.getNombre());
+    guerrero.agregarHabilidad(habilidadGuerrero);
+
+    Habilidad habilidadMago = ElegirHabilidades.elegirHabilidad(scanner, mago.getNombre());
+    mago.agregarHabilidad(habilidadMago);
+
+
 
         // Se crea e inicia el juego
         JuegoLucha juego = new JuegoLucha(guerrero, mago);
