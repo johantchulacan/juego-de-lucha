@@ -7,18 +7,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Se solicitan nombres para los personajes
-        System.out.print("Nombre del Guerrero: ");
-        String nombre1 = scanner.nextLine();
+       System.out.print("Nombre del Guerrero: ");
+        String nombreGuerrero = scanner.nextLine();
+        Arma armaGuerrero = ElegirArmas.elegirArma(scanner);
+
         System.out.print("Nombre del Mago: ");
-        String nombre2 = scanner.nextLine();
+        String nombreMago = scanner.nextLine();
+        Arma armaMago = ElegirArmas.elegirArma(scanner);
+ // Se instancian los personajes
+        Guerrero guerrero = new Guerrero(nombreGuerrero, armaGuerrero);
+        Mago mago = new Mago(nombreMago, armaMago);
 
-        // Se crean armas para cada personaje
-        Arma espada = new Arma("Espada de Hierro", 10, 30);
-        Arma baston = new Arma("Bastón Mágico", 10, 30);
-
-        // Se instancian los personajes
-        Guerrero guerrero = new Guerrero(nombre1, espada);
-        Mago mago = new Mago(nombre2, baston);
 
         // Se asignan habilidades a los personajes
         guerrero.agregarHabilidad(new Habilidad("Corte Circular"));
