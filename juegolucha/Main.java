@@ -33,6 +33,7 @@ public class Main {
         juego.iniciarPelea();
     }
 
+     // Método para que el usuario seleccione un arma
     public static Arma elegirArma(Scanner scanner) {
         while (true) {
             System.out.println("Elige un arma:");
@@ -55,6 +56,7 @@ public class Main {
         }
     }
 
+    // Método para que el usuario seleccione una habilidad
     public static Habilidad elegirHabilidad(Scanner scanner, String nombre) {
         while (true) {
             System.out.println("Elige una habilidad para " + nombre + ":");

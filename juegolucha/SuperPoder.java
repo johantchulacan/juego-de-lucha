@@ -1,3 +1,4 @@
+// Clase que representa una habilidad especial que otorga fuerza extra
 public class SuperPoder extends Habilidad {
     public SuperPoder() {
         super("SuperPoder");

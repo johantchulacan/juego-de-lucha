@@ -1,3 +1,4 @@
+// Clase que representa la habilidad de saltar
 public class Saltar extends Habilidad {
     public Saltar() {
         super("Saltar");
