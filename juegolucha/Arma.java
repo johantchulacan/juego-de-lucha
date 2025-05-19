@@ -1,4 +1,5 @@
 import java.util.Random;
+
 /**
  * Clase que representa un arma utilizada por un personaje.
  * Contiene un rango de daño aleatorio.
@@ -10,7 +11,7 @@ public class Arma {
     private int maxDano;
     private Random rand = new Random(); // Generador de números aleatorios
 
-// Método para calcular el daño aleatorio que inflige el arma
+    // Método para calcular el daño aleatorio que inflige el arma
 
     public Arma(String nombre, int minDano, int maxDano) {
         this.nombre = nombre;

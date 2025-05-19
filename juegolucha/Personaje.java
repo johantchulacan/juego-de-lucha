@@ -15,16 +15,15 @@ public class Personaje {
         this.cantidadHabilidades = 0;
     }
 
-    
     public void atacar(Personaje oponente) {
         // Método vacío, se sobrescribe en subclases
     }
 
-
     // Aplica daño al personaje
     public void recibirDano(int dano) {
         this.puntosDeVida -= dano;
-        if (this.puntosDeVida < 0) this.puntosDeVida = 0;
+        if (this.puntosDeVida < 0)
+            this.puntosDeVida = 0;
     }
 
     // Indica si el personaje aún está vivo
@@ -69,4 +68,3 @@ public class Personaje {
         return null;
     }
 }
-

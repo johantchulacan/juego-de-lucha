@@ -1,7 +1,7 @@
 //Clase que controla el flujo del juego de pelea por turnos.
 
 public class JuegoLucha {
-    
+
     private Personaje jugador1;
     private Personaje jugador2;
 
@@ -10,7 +10,7 @@ public class JuegoLucha {
         this.jugador2 = p2;
     }
 
-// Inicia el combate entre los dos personajes hasta que uno pierda
+    // Inicia el combate entre los dos personajes hasta que uno pierda
 
     public void iniciarPelea() {
         System.out.println("La pelea comienza entre " + jugador1.getNombre() +

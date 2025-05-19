@@ -6,10 +6,9 @@ public class CorrerRapido extends Habilidad {
         super("Correr Rápido");
     }
 
-     // Implementación específica de cómo se usa esta habilidad
- public void usar() {
+    // Implementación específica de cómo se usa esta habilidad
+    public void usar() {
         System.out.println("¡El personaje corre a velocidad increíble!");
     }
-
 
 }

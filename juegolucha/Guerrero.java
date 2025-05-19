@@ -5,14 +5,14 @@ public class Guerrero extends Personaje {
         super(nombre, arma);
     }
 
-// Método de ataque específico para el Guerrero
+    // Método de ataque específico para el Guerrero
 
     public void atacar(Personaje oponente) {
         int dano = arma.usar();
         oponente.recibirDano(dano);
         System.out.println(this.nombre + " (Guerrero) ataca con " + arma.getNombre() +
-                           " causando " + dano + " de daño.");
-        
+                " causando " + dano + " de daño.");
+
         Habilidad habilidad = getPrimeraHabilidad();
         if (habilidad != null) {
             habilidad.usar();

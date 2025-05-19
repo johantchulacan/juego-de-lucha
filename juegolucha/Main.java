@@ -1,39 +1,37 @@
+
 // Clase principal que ejecuta el programa, permite al usuario ingresar nombres y lanza la pelea
 import java.util.Scanner;
 
 public class Main {
-    
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         // Se solicitan nombres para los personajes
-       System.out.print("Nombre del Guerrero: ");
+        System.out.print("Nombre del Guerrero: ");
         String nombreGuerrero = scanner.nextLine();
         Arma armaGuerrero = elegirArma(scanner);
 
         System.out.print("Nombre del Mago: ");
         String nombreMago = scanner.nextLine();
         Arma armaMago = elegirArma(scanner);
- // Se instancian los personajes
+        // Se instancian los personajes
         Guerrero guerrero = new Guerrero(nombreGuerrero, armaGuerrero);
         Mago mago = new Mago(nombreMago, armaMago);
 
-
         // Se asignan habilidades a los personajes
-     Habilidad habilidadGuerrero = elegirHabilidad(scanner, guerrero.getNombre());
-    guerrero.agregarHabilidad(habilidadGuerrero);
+        Habilidad habilidadGuerrero = elegirHabilidad(scanner, guerrero.getNombre());
+        guerrero.agregarHabilidad(habilidadGuerrero);
 
-    Habilidad habilidadMago = elegirHabilidad(scanner, mago.getNombre());
-    mago.agregarHabilidad(habilidadMago);
-
-
+        Habilidad habilidadMago = elegirHabilidad(scanner, mago.getNombre());
+        mago.agregarHabilidad(habilidadMago);
 
         // Se crea e inicia el juego
         JuegoLucha juego = new JuegoLucha(guerrero, mago);
         juego.iniciarPelea();
     }
 
-     // Método para que el usuario seleccione un arma
+    // Método para que el usuario seleccione un arma
     public static Arma elegirArma(Scanner scanner) {
         while (true) {
             System.out.println("Elige un arma:");

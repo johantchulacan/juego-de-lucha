@@ -16,6 +16,6 @@ public class Habilidad {
     // Método para usar la habilidad (puede ser sobrescrito)
     public void usar() {
         System.out.println("Usando habilidad: " + nombre);
-}
+    }
 
 }
